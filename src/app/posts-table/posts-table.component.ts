@@ -22,5 +22,9 @@ export class PostsTableComponent implements OnInit {
       }
     });
   }
+
+  goToProductDetails(id) {
+    this.router.navigate(['/admin/post', id]);
+  }
   
 }

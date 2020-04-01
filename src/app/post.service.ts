@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { BlogPost } from './BlogPost'
 import { Observable } from 'rxjs';
 
-
 const perPage = 6;
 
 @Injectable({

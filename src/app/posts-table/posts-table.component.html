@@ -14,7 +14,7 @@
  
     <tbody>
  <tr *ngFor="let post of blogPosts" 
-    [routerLink]="['/admin/post', post.id]">
+    (click)="goToProductDetails(post._id)">
  <td>{{post.title}}</td>
  <td>{{post.postDate | date: 'meidum'}}</td>
  <td>{{post.category}}</td>
