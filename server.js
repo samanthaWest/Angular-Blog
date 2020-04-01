@@ -1,5 +1,5 @@
 const express = require('express');
-const app = expres();
+const app = express();
 
 app.use(express.static(__dirname + '/dist'));
 
