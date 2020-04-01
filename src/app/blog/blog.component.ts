@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import blogData from '../blogData.json';
 import { BlogPost } from '../BlogPost';
- import { PostService } from '../post.service.js';
- import {ActivatedRoute, Router, NavigationEnd} from '@angular/router';
+import { PostService } from '../post.service.js';
+import {ActivatedRoute, Router, NavigationEnd} from '@angular/router';
 
 @Component({
   selector: 'app-blog',
