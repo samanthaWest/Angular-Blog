@@ -32,4 +32,22 @@ export class PostService {
   getTags(): Observable<string[]>{
     return this.http.get<string[]>('https://assign-5-backend.herokuapp.com/api/tags/');
   } 
+
+  getAllPosts(): Observable<BlogPost[]> {
+    let maxInteger = Number.MAX_SAFE_INTEGER;
+    return this.http.get<BlogPost[]>(`https://assign-5-backend.herokuapp.com/api/posts?page=1&perPage=${maxInteger}`);
+  }
+
+  newPost(data: BlogPost): Observable<any> {
+    return this.http.post<any>(`https://assign-5-backend.herokuapp.com/api/posts`, data);
+  }
+
+  updatePostById(id: string, data: BlogPost): Observable<any> {
+    return this.http.put<any>(`https://assign-5-backend.herokuapp.com/api/posts/${id}`, data);
+  }
+
+  deletePostById(id: string): Observable<any> {
+    return this.http.delete<any>(`https://assign-5-backend.herokuapp.com/api/posts/${id}`);
+  }
+
 }
