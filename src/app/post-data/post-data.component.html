@@ -39,10 +39,10 @@
         <form class="commenting-form" (ngSumit)="submitComment()">
           <div class="row">
             <div class="form-group col-md-12">
-              <input type="text" name="commentName" id="commentName" [(ngModule)]="commentName" placeholder="Name" class="form-control">
+              <input type="text" name="commentName" id="commentName" [(ngModel)]="commentName" placeholder="Name" class="form-control">
             </div>
             <div class="form-group col-md-12">
-              <textarea name="commentText" [(ngModule)]="commentText" id="commentText" placeholder="Type your comment" class="form-control"></textarea>
+              <textarea name="commentText" [(ngModel)]="commentText" id="commentText" placeholder="Type your comment" class="form-control"></textarea>
             </div>
             <div class="form-group col-md-12">
               <button type="submit" class="btn btn-secondary">Submit Comment</button>
